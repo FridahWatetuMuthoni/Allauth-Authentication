@@ -1,0 +1,22 @@
+{% extends '../base.html' %}
+<!---->
+{% load i18n %} {% load account socialaccount %}
+<!---->
+{% block content %}
+<section class="w-100 row mt-5">
+  <form
+    class="col-md-8 col-lg-6 shadow p-5 mx-auto mt-5"
+    method="post"
+    action="{% url 'account_signup' %}"
+  >
+    {% csrf_token %}
+    <h3 class="mb-4">Registration Form</h3>
+    {{form.as_p}}
+
+    <button type="submit" class="btn btn-primary my-3">Submit</button>
+    <p>
+      Already have an account? <a href="{% url 'account_login' %}">Signup</a>
+    </p>
+  </form>
+</section>
+{% endblock %}

@@ -1,0 +1,14 @@
+.errorlist li {
+  color: rgb(220, 53, 69);
+  font-weight: bold;
+}
+
+.helptext {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+#id_remember,
+label[for="id_remember"] {
+  display: none;
+}
